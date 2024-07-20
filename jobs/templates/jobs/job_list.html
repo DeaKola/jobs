@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Listings</title>
+</head>
+<body>
+<h1>Job Listings</h1>
+<ul>{% for job in jobs %}
+    <li><a href="{% url 'job_details' job.id %}">{{job.job_title}}</a> at {{ job.company.name }}</li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

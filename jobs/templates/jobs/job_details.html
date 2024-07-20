@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{job.job_title}}</title>
+</head>
+<body>
+<h1>{{ job.job_title }}</h1>
+<p>Company: {{ job.company.name }}</p>
+<p>Location: {{ job.location }}</p>
+<p>{{ job.description }}</p>
+<a href ="{% url 'apply' job.id %}">Apply for this job</a>
+</body>
+</html>
