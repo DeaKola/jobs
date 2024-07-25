@@ -3,43 +3,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <title>Job Listings</title>
-
-
 </head>
 <body>
 <header>
-        <div class="header">
-            <h1>Job Portal</h1>
-            <p>Where talent meets opportunity<br>Start your journey towards success</p>
+    <div class="header">
+        <h1>JobQuest</h1>
+        <p id="slogan">Where talent meets opportunity<br>Start your journey towards success</p>
+    </div>
+    <nav>
+        <a href='{% url "home" %}'>About us</a>
+        <div class="dropdown">
+            <a href="{% url 'job_list' %}" class="dropbtn">Categories</a>
+            <div class="dropdown-content">
+                <a href="{% url 'job_list' %}">All</a>  <!-- Link to show all jobs -->
+                <a href="{% url 'job_list_by_category' category='Healthcare' %}">Healthcare </a>
+                <a href="{% url 'job_list_by_category' category='Technology' %}">Technology</a>
+                <a href="{% url 'job_list_by_category' category='Finance' %}">Finance</a>
+                <!-- Add more categories as needed -->
+            </div>
         </div>
-<nav>
-    <a href='home.html'>Home</a>
-    <a href='categories.html'>Categories
-    <ul>
-        <li><a href="healthcare.html">healthcare</a></li>
-        <li><a href="IT">IT</a></li>
-    </ul>
-    </a>
-    <a href="register.html">Sign in</a>
-</nav></header>
-<h1>Job Listings</h1>
-<ul>{% for job in jobs %}
-    <li><a href="{% url 'job_details' job.id %}">{{job.job_title}}</a>
+        <a href='{% url "sign_in" %}'>Sign up</a>
+        <a href='{% url "log_in" %}'>Log in</a>
+    </nav>
+</header>
+<h1>Job Listings{% if selected_category %} - {{ selected_category }}{% endif %}</h1>
+<ul class="job-list">
+    {% for job in jobs %}
+    <li class="job-item">
+        <a href="{% url 'job_details' job.id %}" id="title">{{ job.job_title }}</a>
         <br>
         {{ job.company.name }}
         <br>
         {{ job.location }}
         {% if job.image %}
-    <img id="image_for_each_job" src="{{ job.image.url }}" alt="Job image for {{ job.job_title }}">
-    {% else %}
-     <img src="{% static 'jobs/images/default.jpg' %}" alt="Default job image">
-     {% endif %}
-        </li>
+            <img id="image_for_each_job" src="{{ job.image.url }}" alt="Job image for {{ job.job_title }}">
+        {% else %}
+            <img src="{% static 'jobs/images/default.jpg' %}" alt="Default job image">
+        {% endif %}
+    </li>
+    {% empty %}
+    <li>No jobs available for this category</li>
     {% endfor %}
-
 </ul>
 </body>
 </html>

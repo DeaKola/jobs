@@ -1,0 +1,72 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/job_portal1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#sign_in_title {
+    margin-bottom: 20px; /* Space between the title and the form */
+}
+
+.form-container {
+    background: rgba(255, 240, 100, 0.8); /* Semi-transparent background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+label, input, button {
+    margin: 5px 0; /* Adjust the margin to reduce space */
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+per log in
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/job_portal1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#sign_in_title {
+text-align: center;
+   margin-bottom: 20px; /* Space between the title and the form */
+}
+
+#log_in_title{
+text-align: center;
+margin-bottom: 20px;
+}
+

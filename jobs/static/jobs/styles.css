@@ -1,0 +1,59 @@
+body {
+    text-decoration:none;
+    background-color: rgba(255, 240, 100, 0.8); /* Background color from your main page */
+    padding: 20px;
+}
+
+#comp{
+font-size:20px;}
+#location{
+font-size:20px;}
+h1 {
+    color: #333; /* Dark color for headings */
+    text-align: center;
+
+}
+
+.job-info {
+    background-color: #fff; /* White background for job info section */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    border-style: dotted;
+}
+
+.job-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Slightly darker text color */
+}
+
+pre {
+    font-size: 14px;
+    background-color: #f0f0f0; /* Light gray background for <pre> elements */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-wrap: break-word; /* Ensure long words wrap */
+    word-wrap: break-word; /* Legacy support for older browsers */
+    white-space: pre-wrap; /* Preserve formatting and wrap lines */
+    border-style: dotted;
+}
+
+a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color for the apply button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+}
+
+a:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

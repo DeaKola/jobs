@@ -1,16 +1,22 @@
- <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-<!DOCTYPE html>
+<!DOCTYPE html>{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Job Portal</title>
+    <link rel="stylesheet" href="{% static 'jobs/style.css' %}">
 </head>
-<body>
-<p>Welcome to the ultimate destination for finding the perfect job!
+<body id="home">
+<p id="home_desc">Welcome to the ultimate destination for finding the perfect job!
     Our platform connects job seekers with top employers across various industries, providing
     a seamless and efficient job search experience. Whether you are looking for a full-time position,
     part-time work, or remote opportunities,
     we have a wide range of job listings to suit your needs.</p>
-<img src="{% static 'jobs/images/job_portal1.png' %}" alt="image">
+<img src="{% static 'jobs/images/job_portal11.jpg' %}" alt="image">
 </body>
+<footer id="footer">
+    <p>Contact Us:</p>
+    <p>Email: <a href="mailto:support@example.com">job_quest@example.com</a></p>
+    <p>Website: <a href="https://www.example.com" target="_blank">www.jobquest.com</a></p>
+    <p>@Copyright 2024 TiranaPython21</p>
+</footer>
 </html>

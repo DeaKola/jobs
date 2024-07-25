@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Healthcare</title>
+</head>
+<body>
+<h1>Healthcare jobs</h1>
+<ul>{% for job in jobs %}
+    <li><a href="{% url 'job_details' job.id %}">{{job.job_title}}</a>
+        <br>
+        {{ job.company.name }}
+        <br>
+        {{ job.location }}
+        {% if job.image %}
+    <img id="image_for_each_job" src="{{ job.image.url }}" alt="Job image for {{ job.job_title }}">
+    {% else %}
+     <img src="{% static 'jobs/images/default.jpg' %}" alt="Default job image">
+     {% endif %}
+        </li>
+    {% endfor %}
+
+</body>
+</html>
